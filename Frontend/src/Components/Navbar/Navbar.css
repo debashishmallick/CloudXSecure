@@ -18,17 +18,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: #ffffff;
   border-radius: 60px;
-
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
 /* Logo */
 .nav-logo img {
   height: 100px;
-  width: 100px;
   width: auto;
   cursor: pointer;
 }
@@ -70,9 +67,7 @@
   border-radius: 12px;
   min-width: 210px;
   padding: 10px 0;
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
@@ -93,15 +88,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.25s ease;
 }
 
 .dropdown li:hover {
   background: #f1f5ff;
-}
-
-.arrow-item svg {
-  color: #2563eb;
 }
 
 /* CTA Button */
@@ -113,12 +103,10 @@
   border-radius: 40px;
   border: none;
   cursor: pointer;
-
   background: linear-gradient(135deg, #4f8cff, #2563eb);
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
-
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
   transition: all 0.35s ease;
 }
@@ -135,7 +123,6 @@
   transition: transform 0.45s ease;
 }
 
-/* Hover */
 .nav-cta:hover {
   transform: translateY(-3px);
   box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
@@ -144,3 +131,113 @@
 .nav-cta:hover .cta-icon {
   transform: rotate(60deg);
 }
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  color: black;
+  padding: 24px;
+  transition: right 0.35s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-header img {
+  width: 120px;
+  height: 120px;
+}
+
+.mobile-header svg {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.mobile-menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.mobile-sub {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.mobile-cta {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
+/* ===================== */
+/* RESPONSIVE FIX (✔)   */
+/* ===================== */
+@media (max-width: 992px) {
+  .nav-menu,
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  /* ✅ Mobile Navbar Fix */
+  .navbar {
+    width: 100%;
+   
+    border-radius: 0px; /* optional but recommended */
+  }
+
+  .nav-wrapper {
+    padding: 0px; /* optional for full edge-to-edge */
+  }
+}
+
