@@ -16,11 +16,11 @@ const Navbar = () => {
         {/* Menu */}
         <ul className="nav-menu">
           <li className="nav-item">
-            Home <FiChevronDown />
+            Home 
           </li>
 
           <li className="nav-item">
-            Pages <FiChevronDown />
+            About 
           </li>
 
           <li className="nav-item">
