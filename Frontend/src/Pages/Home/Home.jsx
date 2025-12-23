@@ -18,10 +18,9 @@ const Home = () => {
     <BestITSolution/>
     <HowItsWork/>
     <Testimonials/>
-        <OurExpertTeam/>
-        <OurBlog/>
-       <Subscribe/> 
-       
+    <OurExpertTeam/>
+    <OurBlog/>
+    <Subscribe/> 
     </>
   )
 }
