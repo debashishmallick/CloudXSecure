@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ===== HEADER ===== */}
+      {/* ================= HEADER ================= */}
       <header className="nav-wrapper">
         <nav className="navbar">
           {/* Logo */}
@@ -29,56 +29,61 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop Menu */}
+          {/* ================= DESKTOP MENU ================= */}
           <ul className="nav-menu desktop-menu">
             <li className="nav-item">
-              <a href="#">Home</a> <FiChevronDown />
+              <a href="/">Home</a>
             </li>
 
             <li className="nav-item">
-              <a href="#">Pages</a> <FiChevronDown />
+              <a href="/about">About Us</a>
             </li>
 
-            <li className="nav-item">
-              <a href="#">Services</a> <FiChevronDown />
-            </li>
-
+            {/* SERVICES */}
             <li className="nav-item dropdown-parent">
-              <a href="#">Case Study</a> <FiChevronDown />
+              <a href="/services">Services</a> <FiChevronDown />
               <ul className="dropdown">
-                <li><a href="#">Case Study</a></li>
-                <li><a href="#">Case Details</a></li>
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown-parent">
-              <a href="#">Blogs</a> <FiChevronDown />
-              <ul className="dropdown">
-                <li><a href="#">Our Blogs</a></li>
-                <li><a href="#">Blog Sidebar</a></li>
-                <li><a href="#">Blog Details</a></li>
+                <li><a href="/services/managed-cloud">Managed Cloud Services</a></li>
+                <li><a href="/services/security">Cloud Security</a></li>
+                <li><a href="/services/hosting">Cloud Hosting</a></li>
+                <li><a href="/services/migration">Cloud Migration</a></li>
+                <li><a href="/services/devops">DevOps & Automation</a></li>
+                <li><a href="/services/monitoring">Monitoring & Cost Optimization</a></li>
+                <li><a href="/services/backup">Backup & Disaster Recovery</a></li>
+                <li><a href="/services/consulting">Cloud Consulting</a></li>
               </ul>
             </li>
 
             <li className="nav-item">
-              <a href="#">Contact</a>
+              <a href="/plan">Plan & Pricing</a>
+            </li>
+
+            <li className="nav-item">
+              <a href="/faq">Faq</a>
+            </li>
+
+            <li className="nav-item">
+              <a href="/blogs">Blogs</a>
+            </li>
+
+            <li className="nav-item">
+              <a href="/contact">Contact</a>
             </li>
           </ul>
 
-          {/* CTA */}
+          {/* ================= CTA ================= */}
           <button className="nav-cta">
-            Get In Touch
-            <HiArrowUpRight />
+            Get In Touch <HiArrowUpRight />
           </button>
 
-          {/* Mobile Toggle */}
+          {/* ================= MOBILE TOGGLE ================= */}
           <div className="mobile-toggle" onClick={() => setMenuOpen(true)}>
             <FiMenu />
           </div>
         </nav>
       </header>
 
-      {/* ===== MOBILE MENU ===== */}
+      {/* ================= MOBILE MENU ================= */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <div className="mobile-header">
           <img src={logo} alt="logo" />
@@ -86,40 +91,30 @@ const Navbar = () => {
         </div>
 
         <ul className="mobile-nav">
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
 
-          <li onClick={() => toggleDropdown("pages")}>
-            Pages <FiChevronRight />
-          </li>
-
+          {/* SERVICES */}
           <li onClick={() => toggleDropdown("services")}>
             Services <FiChevronRight />
           </li>
-
-          <li onClick={() => toggleDropdown("case")}>
-            Case Study <FiChevronRight />
-          </li>
-
-          {activeDropdown === "case" && (
+          {activeDropdown === "services" && (
             <div className="mobile-sub">
-              <a href="#">Case Study</a>
-              <a href="#">Case Details</a>
+              <a href="/services/managed-cloud">Managed Cloud Services</a>
+              <a href="/services/security">Cloud Security</a>
+              <a href="/services/hosting">Cloud Hosting</a>
+              <a href="/services/migration">Cloud Migration</a>
+              <a href="/services/devops">DevOps & Automation</a>
+              <a href="/services/monitoring">Monitoring & Cost Optimization</a>
+              <a href="/services/backup">Backup & Disaster Recovery</a>
+              <a href="/services/consulting">Cloud Consulting</a>
             </div>
           )}
 
-          <li onClick={() => toggleDropdown("blog")}>
-            Blogs <FiChevronRight />
-          </li>
-
-          {activeDropdown === "blog" && (
-            <div className="mobile-sub">
-              <a href="#">Our Blogs</a>
-              <a href="#">Blog Sidebar</a>
-              <a href="#">Blog Details</a>
-            </div>
-          )}
-
-          <li><a href="#">Contact</a></li>
+          <li><a href="/plan">Plan & Pricing</a></li>
+          <li><a href="/faq">Faq</a></li>
+          <li><a href="/blogs">Blogs</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
 
         <button className="mobile-cta">
@@ -127,8 +122,10 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Overlay */}
-      {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)} />}
+      {/* ================= OVERLAY ================= */}
+      {menuOpen && (
+        <div className="overlay" onClick={() => setMenuOpen(false)} />
+      )}
     </>
   );
 };

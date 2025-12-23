@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./HeroSection.css";
-import heroImg from "../../assets/female.jpg";
+import heroImg from "../../assets/female.webp";
 
 const HeroSection = () => {
   const particlesRef = useRef(null);

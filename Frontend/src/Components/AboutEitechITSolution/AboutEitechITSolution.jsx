@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./AboutEitechITSolution.css";
-import img1 from "../../assets/female.jpg";
-import img2 from "../../assets/female.jpg";
-import img3 from "../../assets/female.jpg";
+import img1 from "../../assets/female.webp";
+import img2 from "../../assets/female.webp";
+import img3 from "../../assets/female.webp";
 
 const AboutEitechITSolution = () => {
   const sectionRef = useRef(null);
