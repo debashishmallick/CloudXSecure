@@ -41,31 +41,30 @@
   z-index: 2;
 }
 
-/* BLOB FIX (FASTER + BIGGER) */
+/* SVG BLOB BACKGROUND */
 .blob-bg {
   position: absolute;
-  inset: -50px;
-  background: linear-gradient(135deg, #3b6cff, #5aa2ff);
-  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  inset: -180px;
+  width: calc(100% + 320px);
+  height: calc(100% + 320px);
   z-index: 1;
-  animation: blob-morph 10s infinite alternate ease-in-out;
+  animation: blobFloat 10s ease-in-out infinite;
   opacity: 0.95;
 }
 
-@keyframes blob-morph {
+/* SVG smooth floating */
+@keyframes blobFloat {
   0% {
-    border-radius: 60% 40% 55% 45%;
-    transform: rotate(0deg) scale(1);
+    transform: translate(0, 0) scale(1);
   }
   50% {
-    border-radius: 40% 60% 45% 55%;
-    transform: rotate(180deg) scale(1.05);
+    transform: translate(14px, -12px) scale(1.05);
   }
   100% {
-    border-radius: 60% 40% 55% 45%;
-    transform: rotate(360deg) scale(1);
+    transform: translate(0, 0) scale(1);
   }
 }
+
 
 /* CONTENT */
 .about-content {
