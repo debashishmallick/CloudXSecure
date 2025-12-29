@@ -4,67 +4,92 @@ import teamImg from "../../assets/others-img2.webp";
 
 const ContactSection = () => {
   return (
-    <section className="contact-wrapper">
-      {/* TOP INFO */}
-      <div className="contact-top">
-        <span className="contact-badge">
-          👍 HAVE QUESTIONS? REACH OUT!
+    <section className="cx-contact">
+
+      {/* ================= HEADER ================= */}
+      <header className="cx-contact__header">
+        <span className="cx-contact__badge">
+          🚀 CLOUDXSECURE SUPPORT
         </span>
 
-        <h2>Let's Discuss Your IT Needs</h2>
+        <h2 className="cx-contact__title">
+          Talk to Our Technology Experts
+        </h2>
 
-        <div className="contact-cards">
-          <div className="contact-card">
-            <div className="icon-circle">✉️</div>
-            <div>
-              <h4>Our Email</h4>
-              <p>eitechsolut@gmail.com</p>
-            </div>
+        <p className="cx-contact__subtitle">
+          CloudXSecure provides secure cloud infrastructure, IT consulting,
+          and scalable digital solutions designed to protect and grow
+          modern businesses worldwide.
+        </p>
+      </header>
+
+      {/* ================= INFO CARDS ================= */}
+      <div className="cx-contact__info">
+        <div className="cx-contact__info-card">
+          <div className="cx-contact__icon">✉️</div>
+          <div className="cx-contact__info-text">
+            <h4>Email Support</h4>
+            <p>support@cloudxsecure.com</p>
           </div>
+        </div>
 
-          <div className="contact-card">
-            <div className="icon-circle">📞</div>
-            <div>
-              <h4>Phone</h4>
-              <p>+1 123 456 7890</p>
-            </div>
+        <div className="cx-contact__info-card">
+          <div className="cx-contact__icon">📞</div>
+          <div className="cx-contact__info-text">
+            <h4>Call Us</h4>
+            <p>+1 (800) 456-7890</p>
           </div>
+        </div>
 
-          <div className="contact-card">
-            <div className="icon-circle">⏰</div>
-            <div>
-              <h4>Schedule</h4>
-              <p>Sunday–Fri: 9 AM – 6 PM</p>
-            </div>
+        <div className="cx-contact__info-card">
+          <div className="cx-contact__icon">⏱️</div>
+          <div className="cx-contact__info-text">
+            <h4>Business Hours</h4>
+            <p>Mon – Sat • 9:00 AM – 6:00 PM</p>
           </div>
         </div>
       </div>
 
-      {/* BOTTOM */}
-      <div className="contact-bottom">
+      {/* ================= CONTENT ================= */}
+      <div className="cx-contact__content">
+
         {/* IMAGE */}
-        <div className="contact-image">
-          <img src={teamImg} alt="team" />
+        <div className="cx-contact__image">
+          <img src={teamImg} alt="CloudXSecure Team" />
         </div>
 
         {/* FORM */}
-        <div className="contact-form">
-          <h3>Get In Touch Now</h3>
+        <form className="cx-contact__form">
+          <h3 className="cx-contact__form-title">
+            Request a Free Consultation
+          </h3>
 
-          <div className="form-grid">
-            <input type="text" placeholder="First Name*" />
-            <input type="text" placeholder="Last Name*" />
-            <input type="text" placeholder="Phone Number*" />
-            <input type="email" placeholder="Email Address*" />
+          <div className="cx-contact__form-grid">
+            <input type="text" placeholder="Full Name*" />
+            <input type="email" placeholder="Business Email*" />
+            <input type="tel" placeholder="Phone Number*" />
+            <input type="text" placeholder="Company Name*" />
           </div>
 
-          <input type="text" placeholder="Service Type*" />
-          <textarea placeholder="Your Message" rows="4" />
+          <select className="cx-contact__select">
+            <option value="">Select Service*</option>
+            <option>Cloud Security</option>
+            <option>IT Infrastructure</option>
+            <option>Web & App Development</option>
+            <option>Enterprise Consulting</option>
+          </select>
 
-          <button className="submit-btn">
-            Get Started Now →
+          <textarea
+            className="cx-contact__textarea"
+            rows="4"
+            placeholder="Briefly describe your requirements"
+          />
+
+          <button className="cx-contact__btn" type="submit">
+            Schedule Consultation →
           </button>
-        </div>
+        </form>
+
       </div>
     </section>
   );

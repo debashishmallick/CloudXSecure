@@ -1,7 +1,7 @@
 import React from "react";
 import "./HowItsWork.css";
 
-import centerImage from "../../assets/female.webp";
+import centerImage from "../../assets/case-img4.webp";
 
 const HowItsWork = () => {
   return (
