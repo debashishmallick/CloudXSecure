@@ -48,6 +48,13 @@ const Navbar = () => {
                   <li><a href="/services/consulting">Cloud Consulting</a></li>
                 </ul>
               </li>
+              <li className="nav-item dropdown-parent">
+                <a href="/devlopment">Devlopment Service</a> <FiChevronDown />
+                <ul className="dropdown">
+                  <li><a href="/devlopment/webdevlopment">WebDevlopment Service</a></li>
+                  <li><a href="/devlopment/appdevlopment">Application Service</a></li>
+                </ul>
+              </li>
 
               <li className="nav-item"><a href="/plan">Plan & Pricing</a></li>
               <li className="nav-item"><a href="/faq">Faq</a></li>
@@ -55,25 +62,10 @@ const Navbar = () => {
               <li className="nav-item"><a href="/contact">Contact</a></li>
             </ul>
 
-<<<<<<< HEAD
-            {/* DEVELOPMENT SERVICES */}
-            <li className="nav-item dropdown-parent">
-              <a href="/development">Development Services</a> <FiChevronDown />
-              <ul className="dropdown">
-                <li><a href="/development/web-development">Web Development</a></li>
-                <li><a href="/development/application-development">Application Development</a></li>
-              </ul>
-            </li>
-
-            <li className="nav-item">
-              <a href="/plan">Plan & Pricing</a>
-            </li>
-=======
             {/* ================= CTA ================= */}
             <button className="nav-cta">
               Get In Touch <HiArrowUpRight />
             </button>
->>>>>>> 3f7e4b54d9ba4c869082a2e02e331aa60a8fac79
 
             {/* ================= MOBILE TOGGLE ================= */}
             <div className="mobile-toggle" onClick={() => setMenuOpen(true)}>
