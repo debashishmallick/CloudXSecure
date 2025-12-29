@@ -7,6 +7,8 @@ import Pages from "./Pages/Pages/Pages"
 import FAQ from "./Pages/FAQ/FAQ"
 import Blog from "./Pages/Blog/Blog"
 import Services from "./Pages/Services/Services"
+import ManagedCloud from "./Pages/ManagedCloud/ManagedCloud"
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/managed-cloud" element={<ManagedCloud />} />
       </Routes>
       <Footer/>
     </>
