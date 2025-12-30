@@ -20,10 +20,9 @@ const Home = () => {
     <HowItsWork/>
     <Pricingplan/>
     <Testimonials/>
-        <OurExpertTeam/>
-        <OurBlog/>
-       <Subscribe/> 
-       
+    <OurExpertTeam/>
+    <OurBlog/>
+    <Subscribe/> 
     </>
   )
 }

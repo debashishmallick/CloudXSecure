@@ -48,6 +48,13 @@ const Navbar = () => {
                   <li><a href="/services/consulting">Cloud Consulting</a></li>
                 </ul>
               </li>
+              <li className="nav-item dropdown-parent">
+                <a href="/devlopment">Devlopment Service</a> <FiChevronDown />
+                <ul className="dropdown">
+                  <li><a href="/devlopment/webdevlopment">WebDevlopment Service</a></li>
+                  <li><a href="/devlopment/appdevlopment">Application Service</a></li>
+                </ul>
+              </li>
 
               <li className="nav-item"><a href="/plan">Plan & Pricing</a></li>
               <li className="nav-item"><a href="/faq">Faq</a></li>
@@ -93,6 +100,17 @@ const Navbar = () => {
               <a href="/services/monitoring">Monitoring & Cost Optimization</a>
               <a href="/services/backup">Backup & Disaster Recovery</a>
               <a href="/services/consulting">Cloud Consulting</a>
+            </div>
+          )}
+
+          {/* DEVELOPMENT SERVICES */}
+          <li onClick={() => toggleDropdown("development")}>
+            Development Services <FiChevronRight />
+          </li>
+          {activeDropdown === "development" && (
+            <div className="mobile-sub">
+              <a href="/development/web-development">Web Development</a>
+              <a href="/development/application-development">Application Development</a>
             </div>
           )}
 
