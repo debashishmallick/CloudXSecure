@@ -1,0 +1,126 @@
+/* ========================= */
+/* LAYOUT */
+/* ========================= */
+
+.mcdo-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 60px;
+  padding: 60px 80px;
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+}
+
+/* ========================= */
+/* LEFT CONTENT */
+/* ========================= */
+
+.mcdo-content {
+  max-width: 900px;
+}
+
+.mcdo-heading {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.mcdo-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.mcdo-sidebar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mcdo-card {
+  width: 100%;
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+}
+
+/* CARD TEXT */
+
+.mcdo-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.mcdo-card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.mcdo-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+}
+
+.mcdo-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.mcdo-btn-primary:hover {
+  background: #1e40af;
+}
+
+.mcdo-btn-outline {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+}
+
+.mcdo-btn-outline:hover {
+  background: #f1f5f9;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .mcdo-wrapper {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+  }
+
+  .mcdo-sidebar {
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mcdo-heading {
+    font-size: 32px;
+  }
+}
