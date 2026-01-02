@@ -19,7 +19,7 @@ const ManageCloudHero = () => {
       <div className="service-hero__bg" />
 
       {/* Content */}
-      <div className="service-hero__content">
+      {/* <div className="service-hero__content">
         <h1 className="service-hero__title">Service Details Right</h1>
 
         <div className="service-hero__breadcrumb">
@@ -28,7 +28,7 @@ const ManageCloudHero = () => {
           <span className="separator">›</span>
           <span>Service Details Right</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Infinite Marquee */}
       <div className="service-hero__marquee">

@@ -53,6 +53,7 @@
 .service-hero__marquee {
   background: #0f3cc9;
   overflow: hidden;
+  margin-top: 5px;
 }
 
 /* Marquee */

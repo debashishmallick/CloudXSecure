@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 50px;
-  padding:20px 60px 80px;
+  padding: 20px 60px 80px;
   background: #ffffff;
   font-family: 'Inter', sans-serif;
 }
@@ -44,6 +44,8 @@
 
 /* RIGHT SIDEBAR */
 .mcda-sidebar {
+  position: sticky;
+  top: 50px;
   background: #f8fafc;
   border-radius: 18px;
   padding: 30px;
